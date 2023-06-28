@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: rgb(102, 197, 226); */
+  background-image: url(../images/bg9.jpg);
+  background-size: cover;
+}
+
+.board.locked {
+  pointer-events: none;
+}
+
+.cell.disabled img {
+  opacity: 0.4;
+}
+
+.animate-wiggle {
+  -webkit-animation: wiggle 1s infinite;
+  animation: wiggle 1s infinite;
+}
+
+
+@-webkit-keyframes wiggle {
+
+  0%,
+  100% {
+    transform: scale(1.2) rotate(7deg);
+  }
+
+  50% {
+    transform: scale(0.8) rotate(-7deg);
+  }
+}
+
+@keyframes wiggle {
+
+  0%,
+  100% {
+    transform: scale(1.2) rotate(7deg);
+  }
+
+  50% {
+    transform: scale(0.8) rotate(-7deg);
+  }
+}
+
+.trophy {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+}
+
+.trophy.active {
+  display: block;
+}
+
+h3.animate-bounce {
+  color: #4f46e5;
+}
+
+.win {
+  background: #4f46e5;
+  position: absolute;
+  width: 15rem;
+  height: 0.6rem;
+}
+
+.win-012 {
+  top: 16%;
+}
+
+.win-345 {
+  top: 49%;
+}
+
+.win-678 {
+  top: 82.5%;
+}
+
+.win-036 {
+  top: 48%;
+  left: 30%;
+  transform: rotate(90deg);
+}
+
+.win-147 {
+  top: 48%;
+  left: 38.6%;
+  transform: rotate(90deg);
+}
+
+.win-258 {
+  top: 48%;
+  left: 47.3%;
+  transform: rotate(90deg);
+}
+
+.win-048 {
+  top: 48.5%;
+  width: 14rem;
+  transform: rotate(45deg);
+}
+
+.win-246 {
+  top: 48.5%;
+  width: 14rem;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 768px) {
+  .win {
+    width: 21rem;
+  }
+
+  .win-048,
+  .win-246 {
+    width: 24rem;
+  }
+
+  .trophy {
+    width: 60px;
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .win {
+    display: none;
+  }
+}
