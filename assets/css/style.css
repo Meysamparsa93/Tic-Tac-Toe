@@ -128,8 +128,8 @@ h3.animate-bounce {
   }
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .win {
     display: none;
   }
-}
+} */
